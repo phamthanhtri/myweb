@@ -1,0 +1,41 @@
+buddypress: giup quan ly thanh vien dang nhap --> dăng gặp lỗi hiển thị menu login trên header  (bo)
+wp-social-login: chức năng hiện tại là đăng nhập app qua facebook lấy thông tin 
+AAM --> phân quyền user ,kết hợp ultimate member và phần thành viên để phân quyền  (done)
+Widget Logic: tùy chọn login mới hien side bar (done) --> đã cài đặt https://premium.wpmudev.org/blog/show-wordpress-widgets-logged-in-users/
+
+quiz-wp 
+Hide quiz title	 : ẩn quiz title trước khi thi  (done)
+WpProQuiz_Controller_Quiz --> trừ count số lần đã thi ,ajaxCompletedQuiz ,isLockQuiz (lock so lan thi), them field is_free vao quiz và table master de quan ly de thi la mien phi hay khong (done)
+WpProQuiz_Controller_Toplist --> đang hiển thị thử ra data từ check count   
+WpProQuiz_Model_CheckQuizCount ,WpProQuiz_Model_CheckQuizCountMapper : class bổ sung cho checkcount(done)
+WpProQuiz_Model_Mapper : bosung them table _tableCheckCount (done)
+Edit wpProQuiz_front.js (done)
+Tao table database 
+
+
+  $checkQuizCountMapper = new WpProQuiz_Model_CheckQuizCountMapper();
+        $userId = get_current_user();
+        $checkQuizCount = $checkQuizCountMapper->fetch($userId);
+        if ($checkQuizCount->getQuizCount() <= 0) {
+            wp_die(__('Bạn đã hết lượt để thi. Xin vui lòng nạp thêm tiền để thi tiếp.'));
+       }
+
+
+--> Thêm khung thông tin sau khi đăng nhập bao gồm : (done)
+Tên thành viên 
+Logout link 
+link nạp thẻ 
+Số lần thi còn lại 
+style.css --> bo sung khung vien
+functions.php --> bo sung shorcode
+
+
+--> cần làm thêm phần hiển thị và cập nhật luợt thi của thành viên trên trang admin
+
+
+23/02 --> cap nhat phan localize cho xep hang
+
+
+
+
+

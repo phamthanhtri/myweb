@@ -1,0 +1,8 @@
+User page --> trang sau khi login thanh cong 
+Register page ---> trang dang ki
+Login page --> trang dang nhap 
+
+ 
+sai khi đăng ký hoặc đăng nhập xong sẽ redirect sang  User page
+
+Cần setup các page tương ứng cho các trang login 
